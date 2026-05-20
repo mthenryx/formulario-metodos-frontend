@@ -1,0 +1,103 @@
+body {
+    height: 100vh;
+    background-color: rgb(196, 196, 196);
+}
+
+header {
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.264);
+}
+
+header img {
+    height: auto;
+    width: 40px;
+    border-radius: 50%;
+}
+
+header span {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+hr {
+    border: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.264);
+}
+
+.inserir {
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.inserir label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inserir button {
+    background-color: rgb(0, 146, 0);
+    border: 1px solid gray;
+    color: aliceblue;
+    font-size: 20px;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.inserir button:hover {
+    transition: 0.5s;
+    background-color: rgb(0, 107, 0);
+}
+
+.inserir button:active {
+    transform: translateY(4px);
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+}
+
+.tabela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+footer {
+    margin-top: 20px;
+    height: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.264);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

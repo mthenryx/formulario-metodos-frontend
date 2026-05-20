@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer type="module"></script>
+    <title>Contatos</title>
+</head>
+<body>
+    <header>
+        <img src="./img/usuario-sem-icone.png" alt="imagem de usuário sem icone">
+        <span>Usuários</span>
+    </header>
+    <main>
+        <h1>Informações</h1>
+        <div class="inserir">
+            <label for="nome">
+                Nome
+                <input type="text" id="nomeInput" placeholder="Ex: Matheus Henry dos Santos">
+            </label>
+            <label for="">
+                Telefone
+                <input type="text" id="numeroInput" placeholder="Ex: 11987654321">
+            </label>
+            <label for="">
+                Foto
+                <input type="text" id="fotoInput" placeholder="Ex: https//:img...">
+            </label>
+            <label for="">
+                E-mail
+                <input type="text" id="emailInput" placeholder="Ex: 09matheushenry@gmail.com">
+            </label>
+            <label for="">
+                Endereço
+                <input type="text" id="enderecoInput" placeholder="Ex: Profº Vicente Amato">
+            </label>
+            <label for="">
+                Cidade
+                <input type="text" id="cidadeInput" placeholder="Ex: Jandira">
+            </label>
+            <button id="salvar">Salvar</button>
+        </div>
+        <hr>
+        <div class="tabela">
+            <table id="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Foto</th>
+                    <th>E-mail</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+                <tr>
+                    <td id="idAlocado"></td>
+                    <td id="nomeTabela"></td>
+                    <td id="telefoneTabela"></td>
+                    <td id="fotoTabela"></td>
+                    <td id="emailTabela"></td>
+                    <td id="enderecoTabela"></td>
+                    <td id="cidadeTabela"></td>
+                    <td id="botoes"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <span>© 2026 • Matheus Henry.</span>
+    </footer>
+</body>
+</html>
