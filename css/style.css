@@ -1,103 +1,171 @@
 body {
+    background-color: rgb(210, 218, 226);
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    background-color: rgb(196, 196, 196);
 }
 
 header {
+    width: 100vw;
+    background-color: white;
     display: flex;
-    height: 50px;
-    justify-content: flex-start;
-    padding-left: 20px;
     align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.264);
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: gray;
+    border-bottom: 1px solid gray;
 }
 
 header img {
-    height: auto;
-    width: 40px;
+    margin-right: 20px;
+    height: 70px;
+    width: auto;
     border-radius: 50%;
 }
 
-header span {
-    font-family: sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+    flex-grow: 1;
 }
 
-main {
+h2 {
+    margin-left: 30px;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #444;
+}
+
+.lista,
+.formulario {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    width: 95%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container {
+    font-family: sans-serif;
+    background-color: white;
+    width: 700px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container h3 {
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.campos-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campos-formulario label {
+    display: flex;
+    flex-direction: column;
+    color: #444;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.campos-formulario input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.campos-formulario input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+#salvar {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#salvar:hover {
+    background-color: #2563eb;
 }
 
 hr {
-    border: 0px;
-    height: 1px;
+    margin-bottom: 50px;
+    border: none;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+#cards {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.264);
-}
-
-.inserir {
-    display: flex;
-    font-family: sans-serif;
-    flex-direction: column;
     gap: 10px;
-    font-size: 16px;
 }
 
-.inserir label {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.card {
+    background-color: aliceblue;
+    height: ;
+    width: ;
 }
 
-.inserir button {
-    background-color: rgb(0, 146, 0);
-    border: 1px solid gray;
-    color: aliceblue;
-    font-size: 20px;
-    width: 100px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.button-atualizar,
+.button-deletar {
+    height: ;
+    width: ;
+    font-size: 14px;
+    color: white;
 }
 
-.inserir button:hover {
-    transition: 0.5s;
-    background-color: rgb(0, 107, 0);
+.button-atualizar {
+    background-color: green;
 }
 
-.inserir button:active {
-    transform: translateY(4px);
-}
-
-table {
-    border-collapse: collapse;
-    background-color: rgb(255, 255, 255);
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    width: 100px;
-    height: 50px;
-    padding: 10px;
-}
-
-.tabela {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
+.button-deletar {
+    background-color: rgb(164, 0, 0);
 }
 
 footer {
-    margin-top: 20px;
-    height: 50px;
-    border-top: 1px solid rgba(0, 0, 0, 0.264);
+    width: 100vw;
+    background-color: white;
+    height: 70px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: rgb(83, 83, 83);
+    border-top: 1px solid gray;
 }
+
