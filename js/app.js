@@ -1,6 +1,8 @@
 'use strict'
 
-import { getContatos, getContato, postContato, putContato, deleteContato } from "./contatos.js"
+import { getContatos, postContato, putContato, deleteContato } from "./contatos.js"
+
+let contatoSelecionado = null
 
 function validarCampos(nome, telefone, email, endereco, cidade) {
     let result = { "status": false, "message": "" }
@@ -23,6 +25,7 @@ function validarCampos(nome, telefone, email, endereco, cidade) {
 }
 
 async function criarCards() {
+
     const contatos = await getContatos()
 
     const cards = document.getElementById("cards")
@@ -91,7 +94,10 @@ async function deletarEAtualizar(id) {
     await criarCards()
 }
 
-async function atualizarDados(contato) {
+function atualizarDados(contato) {
+
+    contatoSelecionado = contato
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -109,18 +115,6 @@ async function atualizarDados(contato) {
     endereco.value = contato.endereco
     const cidade = document.getElementById("cidadeInput")
     cidade.value = contato.cidade
-
-    document.getElementById("salvar").addEventListener("click", async () => {
-        try {
-
-            
-        
-            await criarCards()
-
-        } catch (error) {
-            alert(error.message)
-        }
-    })
 }
 
 document.getElementById("salvar").addEventListener("click", async () => {
@@ -132,14 +126,14 @@ document.getElementById("salvar").addEventListener("click", async () => {
         const endereco = document.getElementById("enderecoInput")
         const cidade = document.getElementById("cidadeInput")
 
-        let validar = validarCampos(nome, telefone, email, endereco, cidade)
+        const validar = validarCampos(nome, telefone, email, endereco, cidade)
 
         if (!validar.status) {
             alert(validar.message)
             return
         }
 
-        let contato = {
+        const contato = {
             nome: nome.value,
             celular: telefone.value,
             foto: foto.value,
@@ -148,7 +142,12 @@ document.getElementById("salvar").addEventListener("click", async () => {
             cidade: cidade.value
         }
 
-        await postContato(contato)
+        if (contatoSelecionado) {
+            await putContato(contatoSelecionado.id, contato)
+            contatoSelecionado = null
+        } else {
+            await postContato(contato)
+        }
 
         nome.value = ""
         telefone.value = ""
